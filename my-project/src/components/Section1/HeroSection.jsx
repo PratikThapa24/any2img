@@ -1,18 +1,25 @@
 import React from "react";
-import Button from "../Button";
+import Button from "../Buttons/Button";
 import PanToolAltIcon from "@mui/icons-material/PanToolAlt";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import StarIcon from "@mui/icons-material/Star";
 import Avatar from "@mui/material/Avatar";
 import AvatarGroup from "@mui/material/AvatarGroup";
+import { useNavigate } from "react-router-dom";
 
 function Section1() {
+
+  const navigation = useNavigate()
+  const navigateToLogin = () => {
+    navigation('/login');
+  }
+
   return (
     <section className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-center gap-16 lg:gap-20 lg:items-start px-8 py-8 lg:py-20">
       {/* Section Row 1 */}
       <div className="flex flex-col gap-7 text-gray-300">
         {/* Column 1 Where the h1 goes */}
-        <div className="flex flex-col">
+        <div className="flex flex-col heading-bold">
           <h1 className="text-8xl font-extrabold mb-4 animate-pulse">
             Ditch the Spreadsheet
           </h1>
@@ -21,14 +28,14 @@ function Section1() {
           </h2>
         </div>
         {/* Column where the paragraph goes */}
-        <div className="text-lg opacity-85 leading-relaxed">
+        <div className="text-lg opacity-85 leading-relaxed heading-semibold">
           <p>
             JobLogify simplifies your job hunt by logging all your applications
           </p>
           <span>in one place. No more spreadsheets or manual tracking!</span>
         </div>
         <div>
-          <Button value="Get Started" />
+          <Button value="Get Started" onClick={navigateToLogin}/>
         </div>
         <div className="flex flex-row gap-5">
           <div>

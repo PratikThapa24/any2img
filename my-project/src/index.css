@@ -29,39 +29,118 @@
     transform-origin: bottom left;
   }
 
-  /* Custom CSS for the button animation */
+/* Custom CSS for the button animation */
 .btn-animated {
-    @apply bg-yellow-500 text-gray-800 font-bold py-2 px-4 rounded transition duration-300 ease-in-out transform hover:bg-yellow-600 hover:scale-105 hover:shadow-lg;
-    position: relative;
-    overflow: hidden;
+  @apply bg-yellow-500 text-gray-800 font-bold py-2 px-4 rounded transition duration-300 ease-in-out transform hover:bg-yellow-600 hover:scale-105 hover:shadow-lg;
+  position: relative;
+  overflow: hidden;
+  animation: moveInButton 0.5s ease-out;
+}
+
+/* Tailwind CSS Utility Classes with Custom Animation */
+.btn-animated-white {
+  @apply bg-gray-700 text-gray-300 font-bold py-2 px-4 rounded-3xl transition duration-300 ease-in-out transform hover:bg-gray-500 hover:text-gray-800 hover:scale-105;
+  position: relative;
+  overflow: hidden;
+  animation: moveInButton 0.5s ease-out;
+}
+
+.btn-animated-white::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.15);
+  transition: all 0.5s;
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 50%;
+}
+
+.btn-animated-white:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.btn-animated::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(0, 0, 0, 0.15);
+  transition: all 0.5s;
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 50%;
+}
+
+.btn-animated:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+@keyframes scale-up {
+  from {
+      transform: scale(1);
   }
-  
-  .btn-animated::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 300%;
-    height: 300%;
-    background: rgba(0, 0, 0, 0.15);
-    transition: all 0.5s;
-    transform: translate(-50%, -50%) scale(0);
-    border-radius: 50%;
+  to {
+      transform: scale(1.1);
   }
-  
-  .btn-animated:hover::before {
-    transform: translate(-50%, -50%) scale(1);
+}
+
+.hover-scale-up:hover {
+  animation: scale-up 0.3s forwards;
+}
+
+@keyframes moveInButton {
+  0% {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0px);
+  }
+}
+
+.heading-bold {
+    animation: moveInLeft 1s ease-out;
+
   }
 
-  @keyframes scale-up {
-    from {
-      transform: scale(1);
-    }
-    to {
-      transform: scale(1.1);
-    }
+  .heading-semibold {
+    animation: moveInRight 1s ease-out
   }
-  
-  .hover-scale-up:hover {
-    animation: scale-up 0.3s forwards;
+
+  @keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
+
+@keyframes moveInRight {
+  0% {
+      opacity: 0;
+      transform: translateX(100px);
   }
+
+  80% {
+      transform: translateX(-10px);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translate(0px);
+  }
+}

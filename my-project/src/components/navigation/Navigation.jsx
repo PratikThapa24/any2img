@@ -1,10 +1,10 @@
 import React from "react";
-import FlashOnIcon from "@mui/icons-material/FlashOn";
+import FlashIcon from "./FlashIcon";
 
 function NavBegin() {
   return (
     <div className="mr-10">
-      <FlashOnIcon style={{ color: "#F59E0B", fontSize: "48px" }} />
+      <FlashIcon size="48px"/>
       <span className="text-gray-300 text-xl font-bold hover:text-gray-500 underline-animation ">
         JobLogify
       </span>
