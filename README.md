@@ -2,6 +2,20 @@ LogJobify | React, Express
 
 Objective: LogJobify is designed to make job application tracking simple and efficient, eliminating the need for cumbersome Excel spreadsheets.
 
+Hero Page:
+
+![Alt text](image.png)
+
+Login Page:
+Authentication Using Google 
+
+![Alt text](image-1.png)
+
+User Page:
+Non quite Completed 
+
+![Alt text](image-2.png)
+
 Features:
 
     Responsive Front End: Built with React, the front end provides a smooth, user-friendly interface that adapts to any device.
@@ -20,17 +34,3 @@ How It Works:
     Log Jobs: With one click, users can log the details of the jobs they have applied for, including company name, position, application date, and status.
     View Listings: Users can browse through comprehensive job listings from various markets directly within the platform.
     Manage Applications: Users can view, edit, or delete their logged applications, keeping their job search organized and up-to-date.
-
-Hero Page:
-
-![Alt text](image.png)
-
-Login Page:
-Authentication Using Google 
-
-![Alt text](image-1.png)
-
-User Page:
-Non quite Completed 
-
-![Alt text](image-2.png)
