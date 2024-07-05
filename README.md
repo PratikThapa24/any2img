@@ -21,3 +21,16 @@ How It Works:
     View Listings: Users can browse through comprehensive job listings from various markets directly within the platform.
     Manage Applications: Users can view, edit, or delete their logged applications, keeping their job search organized and up-to-date.
 
+Hero Page:
+
+![Alt text](image.png)
+
+Login Page:
+Authentication Using Google 
+
+![Alt text](image-1.png)
+
+User Page:
+Non quite Completed 
+
+![Alt text](image-2.png)
