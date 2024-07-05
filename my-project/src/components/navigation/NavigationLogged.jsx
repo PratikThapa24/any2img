@@ -3,7 +3,7 @@ import ButtonAppBar from "./ButtonAppBar";
 
 function NavigationLogged() {
     return (
-        <div class="w-full">
+        <div class=" flex flex-col w-full">
             <ButtonAppBar />
         </div>
         

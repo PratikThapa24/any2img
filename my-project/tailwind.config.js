@@ -13,6 +13,7 @@ module.exports = {
         primary: '#F59E0B',              // Example primary color (e.g., for buttons)
         darkTeal: '#2D3748',
         offWhite: '#f0f0f0', // Adjust this value to your preference
+        loggedColor : "#27374D"
 
       },
       fontFamily: {
